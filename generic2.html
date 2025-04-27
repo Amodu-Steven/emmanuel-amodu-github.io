@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>PORTFOLIO</strong> <span>FOR EMMANUEL AMODU</span></a>
+						<nav>
+							<a href="#menu">PROJECTS</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+                            <li><a href="index.html">HOME</a></li>
+							<li><a href="landing.html">PROJECTS</a></li>
+							<li><a href="generic.html">AUTONOMOUS MOBILE ROBOT NAVIGATION</a></li>
+							<li><a href="generic2.html">DEEP-LEARNING BASED ANOMALY DETECTION SYSTEM</a></li>
+							<li><a href="generic3.html">3D INTERACTIVE VISUALIZATION</a></li>
+							<li><a href="generic4.html">PROGRAMMING ABB ROBOTS</a></li>
+							
+						</ul>
+				
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>DEEP-LEARNING BASED ANOMALY DETECTION SYSTEM</h1>
+									</header>
+						
+									<p><!-- Overview Section -->
+										<h2>Overview</h2>
+										<p>
+										  This research focuses on developing an advanced online anomaly detection system enhanced by deep learning and feature localisation techniques. The system autonomously identifies anomalies within real-time data streams, specifying the exact features causing irregularities, making it suitable for domestic security, maintenance, and monitoring tasks.
+										</p>
+										
+										<!-- Methodology Section -->
+										<h2>Methodology</h2>
+										<ul>
+										  <li>
+											Employed a supervised deep-learning approach using convolutional neural networks (CNNs), optimized with the VGG16 architecture and
+											transfer learning.
+										  </li>
+										  <li>
+											Developed an interactive Graphical User Interface (GUI)using Tkinter, integrated with anomaly detection algorithms for intuitive user interaction.
+										  </li>
+										  <li>
+											Utilized datasets captured from domestic scenarios:
+											<ul>
+											  <li>Kitchen tap usage (open/closed)</li>
+											  <li>Bedroom drawer activity (open/closed)</li>
+											  <li>Toilet lid positions (open/closed)</li>
+											  <li>Human presence detection in hallways (occupied/vacant)</li>
+											</ul>
+										  </li>
+										</ul>
+										</p> 
+										<h2>Models</h2>
+
+<h3>Model 1: Kitchen Tap Anomaly Detection</h3>
+<p>
+  This model identifies whether a kitchen tap is open or closed in real-time. It aims to detect anomalies such as an unattended running tap, which could lead to water wastage or potential flooding. The model uses image data and CNN-based feature localisation (Grad-CAM) to visually highlight the specific region (the tap) that triggers the anomaly detection, achieving an accuracy of <strong>91.66%</strong>.
+</p>
+
+<h3>Model 2: Bedroom Drawer Anomaly Detection</h3>
+<p>
+  Model 2 detects whether a bedroom drawer is open or closed. Its goal is to monitor household security and organisation by recognising if a drawer is left open unintentionally or opened without authorisation. Using deep-learning image recognition, this model precisely highlights the drawer's state, attaining an impressive accuracy of <strong>96.83%</strong>.
+</p>
+
+<h3>Model 3: Toilet Lid Anomaly Detection</h3>
+<p>
+  This model accurately detects whether a toilet lid is open or closed. Its application primarily involves hygiene control and domestic sanitation management. Through feature localisation, the model explicitly identifies and visually highlights the toilet lid's state, maintaining a perfect detection accuracy of <strong>100%</strong>.
+</p>
+
+<h3>Model 4: Hallway Human Presence Detection</h3>
+<p>
+  Model 4 is designed to detect human presence in hallway environments, crucial for home security and occupancy management. It accurately differentiates between an empty hallway and one occupied by a person, significantly aiding in domestic surveillance and safety systems. The model robustly identifies the precise regions of human occupancy, achieving a flawless accuracy of <strong>100%</strong>.
+</p>
+
+										
+										<ul>
+											<h3>Overview of GUI Button Functionality:</h3>
+											<p>The GUI is built using Python’s Tkinter library, providing a simple and user-friendly interface to interact with your deep learning anomaly detection system. Each button within the GUI is designed to trigger specific actions, streamlining user interactions, and providing real-time feedback.</p>
+											<li>
+											  ✅ Camera and Image Capture Buttons
+											  <ul>
+												<li>Update Camera Feed: Continuously updates and displays live video from the connected camera, allowing users to monitor real-time scenarios.</li>
+												<li>Snap Picture: Captures a still image from the live camera feed. After clicking this button, the captured image is displayed for preview, ready for subsequent actions.</li>
+											  </ul>
+											</li>
+										  
+											<li>
+											  ✅ Data Collection Buttons
+											  <ul>
+												<li>Save True Image: Saves the currently captured image into a folder designated for "normal" or "non-anomalous" scenarios. For example, images showing a closed drawer or tap turned off.</li>
+												<li>Save False Image: Saves images into the "anomalous" folder, used to train the model to recognize anomalies, such as an open drawer or running tap.</li>
+											  </ul>
+											</li>
+										  
+											<li>
+											  ✅ Model Selection and Training Buttons
+											  <ul>
+												<li>Load Pre-trained Model: Allows selection and loading of a pre-existing deep-learning model from a dropdown menu. Once clicked, the GUI displays a message confirming the successful loading of the selected model.</li>
+												<li>Train Model: Initiates the training process for the selected model using previously captured data. Training progress is automatically visualised with accuracy and loss plots displayed in real-time.</li>
+												<li>Save Trained Model: After training, clicking this button saves the newly trained model to disk for future use or further testing.</li>
+											  </ul>
+											</li>
+										  
+											<li>
+											  ✅ Testing Buttons
+											  <ul>
+												<li>Load Trained Model: Loads a previously trained model from storage, making it ready for real-time testing or using reserved testing data.</li>
+												<li>Test Model on Still Image: Tests the loaded model against the current still image displayed in the preview pane, immediately showing the detected anomaly (if any), along with a visual heatmap pinpointing the exact anomaly.</li>
+												<li>Test on Reserved Data:Tests the model using the 20% of data automatically set aside during training for validation, providing performance metrics and visual feedback to ensure model robustness.</li>
+											  </ul>
+											</li>
+										  
+											<li>
+											  ✅ Feedback and Status Messages
+											  <ul>
+												<li>After each button click, the GUI provides clear, instant feedback via a status box, informing users of the action outcome (e.g., "Model loaded successfully," "Image saved," or error messages if something goes wrong).</li>
+											  </ul>
+											</li>
+										  </ul>
+
+										  <p><h2>User Interaction Flow Example</h2>
+											<ol>
+											  <li>Update Camera Feed to view the live scenario.</li>
+											  <li>Snap Picture to capture a moment from the feed.</li>
+											  <li>Save True Image/Save False Image to classify and store data.</li>
+											  <li>Select model and click Load Pre-trained Model or Train Model.</li>
+											  <li>After training, click Save Trained Model.</li>
+											  <li>Load trained models anytime using Load Trained Model for testing.</li>
+											  <li>Use Test Model on Still Image or Test on Reserved Data to evaluate performance and visualise detected anomalies.</li>
+											</ol>
+											</p>
+										  
+									<p>This project demonstrates my ability to design and train deep learning models, develop AI-powered detection systems, integrate machine learning with user interfaces, and collect real-world data for model training.</p>
+								
+		
+
+        <!-- Google Drive Link -->
+        <p>Access the project files and source code: 
+            <a href="https://drive.google.com/drive/folders/1M0BZ5X8UOxWXiWREp9eLxN0fyFsrP8mV?usp=drive_link" target="_blank">View on Google Drive</a>
+        </p>
+								</div>
+							</section>
+
+
+
+					</div>
+
+		
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
